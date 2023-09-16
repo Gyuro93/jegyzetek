@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Szerver konfigurálása</h2>
+    <p>
+        const http = require('http'); <br>
+        <br>
+        const hostname = "127.0.0.1";<br>
+        const port = 8080;<br>
+        <br>
+        const server = http.createServer((req, res) => {<br>
+        res.statusCode = 200;<br>
+        res.setHeader('Content-Type', 'text/plain');<br>
+        res.end("Vizsga szerver");<br>
+        });<br>
+        <br>
+        server.listen(port, hostname, () => {<br>
+        console.log(`A szerver működik a http://${hostname}:${port}/ címen`);<br>
+        });<br>
+    </p>
+</body>
+
+</html>

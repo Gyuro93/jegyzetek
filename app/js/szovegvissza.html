@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input {
+
+            width: 80%;
+            height: 5rem;
+            font-size: 2rem;
+            outline: none;
+        }
+
+        p {
+            font-size: 2rem;
+        }
+
+        span {
+            font-size: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" placeholder="Kérem adja meg a begépelt szöveget" id="beIrtSzoveg">
+
+    <p>Beirt Szöveg : <span id="ki"></span></p>
+
+    <script>
+
+        let inputElem = document.getElementById("beIrtSzoveg");
+        let spanElem = document.getElementById("ki");
+
+        inputElem.addEventListener("input", function () {
+            let szoveg = inputElem.value;
+            let szovegVissza = szoveg.split("").reverse().join("");
+            spanElem.textContent = szovegVissza;
+        });
+
+    </script>
+</body>
+
+</html>

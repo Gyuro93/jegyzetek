@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    input {
+        width: 80%;
+        height: 5rem;
+        font-size: 2rem;
+        outline: none;
+    }
+
+    p {
+        font-size: 2rem;
+    }
+
+    span {
+        font-size: 2rem;
+    }
+</style>
+
+<body>
+    <input type="text" id="szovegBe" placeholder="Adja meg a szöveget">
+    <p>Szelektált szöveg : <span id="szovegKi"></span></p>
+
+    <script>
+        // beírt szövegböl a magán és mássalhanhzókat kitörli Kis és nagybetüket egyaránt
+        let inputElem = document.getElementById("szovegBe");
+        let spanElem = document.getElementById("szovegKi");
+        let maganhangzok = ["a", "á", "e", "é", "i", "í", "o", "ó", "ö", "ő", "u", "ú", "ü", "ű"];
+
+        szovegBe.addEventListener("input", function () {
+            let szoveg = inputElem.value;
+            let szovegVissza = "";
+            for (let i = 0; i < szoveg.length; i++) {
+                if (maganhangzok.indexOf(szoveg[i].toLowerCase()) === -1) {
+                    szovegVissza += szoveg[i];
+                }
+            }
+            spanElem.textContent = szovegVissza;
+        });
+    </script>
+</body>
+
+</html>

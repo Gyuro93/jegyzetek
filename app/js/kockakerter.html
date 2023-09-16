@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kocka Került Terület</title>
+</head>
+
+<body>
+
+    <label for="kocka">Kocka mérrzr</label><br>
+    <input type="number" id="kockaBe"> <br>
+    <button onclick="szamol()">Számol/mutat</button>
+    <p>A kocka térfogata: <span id="eredmenyKit"></span></p>
+    <p>A kocka kerülete: <span id="eredmenyKik"></span></p>
+
+    <script>
+        function szamol() {
+            let kocka = document.getElementById("kockaBe").value;
+            let kockaKerulet = kocka * 12;
+            let kockaTerulet = kocka * kocka * 6;
+            document.getElementById("eredmenyKit").innerHTML = kockaTerulet;
+            document.getElementById("eredmenyKik").innerHTML = kockaKerulet;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <table class="table table-hover">
+            <tr class="text-center">
+                <th>Parancsok</th>
+                <th>Jelentései</th>
+            </tr>
+            <tr>
+                <td colspan="2" class="text-center "><b>Pozicionálás</b></td>
+            </tr>
+            <tr>
+                <td>position: static;</td>
+                <td>Az elemek a dokumentum áramlásával kerülnek elhelyezésre.</td>
+            </tr>
+            <tr>
+                <td>position: relative;</td>
+                <td>Az elemek a dokumentum áramlásával kerülnek elhelyezésre, de a pozíciójukat a top, bottom, left,
+                    right tulajdonságokkal megadhatjuk.</td>
+            </tr>
+            <tr>
+                <td>position: absolute;</td>
+                <td>Az elemek a dokumentum áramlásától függetlenül kerülnek elhelyezésre, de a pozíciójukat a top,
+                    bottom, left, right tulajdonságokkal megadhatjuk.</td>
+            </tr>
+            <tr>
+                <td>position: fixed;</td>
+                <td>Az elemek a dokumentum áramlásától függetlenül kerülnek elhelyezésre, de a pozíciójukat a top,
+                    bottom, left, right tulajdonságokkal megadhatjuk. A böngészőablakhoz viszonyítva kerülnek
+                    elhelyezésre.</td>
+            </tr>
+            <tr>
+                <td>position: sticky;</td>
+                <td>Az elemek a dokumentum áramlásától függetlenül kerülnek elhelyezésre, de a pozíciójukat a top,
+                    bottom, left, right tulajdonságokkal megadhatjuk. A böngészőablakhoz viszonyítva kerülnek
+                    elhelyezésre, de a megadott pozícióig a dokumentum áramlásával mozognak.</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="text-center ">Szöveg</td>
+            </tr>
+            <tr>
+                <td>text-align: left;</td>
+                <td>A szöveg balra igazított.</td>
+            </tr>
+            <tr>
+                <td>text-align: right;</td>
+                <td>A szöveg jobbra igazított.</td>
+            </tr>
+            <tr>
+                <td>text-align: center;</td>
+                <td>A szöveg középre igazított.</td>
+            </tr>
+            <tr>
+                <td>text-align: justify;</td>
+                <td>A szöveg sorkizárt.</td>
+            </tr>
+            <tr>
+                <td>text-align: start;</td>
+                <td>A szöveg a dokumentum nyelvének megfelelően igazított.</td>
+            </tr>
+            <tr>
+                <td>text-align: end;</td>
+                <td>A szöveg a dokumentum nyelvének megfelelően igazított.</td>
+            </tr>
+            <tr>
+                <td>text-align: match-parent;</td>
+                <td>A szöveg a szülőelem igazítását veszi át.</td>
+            </tr>
+            <tr>
+                <td>text-align: initial;</td>
+                <td>A szöveg a böngésző alapértelmezett igazítását veszi át.</td>
+            </tr>
+            <tr>
+                <td>text-align: inherit;</td>
+                <td>A szöveg a szülőelem igazítását veszi át.</td>
+            </tr>
+            <tr>
+                <td>text-decoration: none;</td>
+                <td>A szöveg aláhúzás nélküli.</td>
+            </tr>
+            <tr>
+                <td>text-decoration: underline;</td>
+                <td>A szöveg aláhúzott.</td>
+            </tr>
+            <tr>
+                <td>text-decoration: overline;</td>
+                <td>A szöveg föléhúzott.</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="text-center ">Padding</td>
+            </tr>
+            <tr>
+                <td>padding: 10px;</td>
+                <td>Az elem belsejétől 10px-re helyezi el a keretet.</td>
+            </tr>
+            <tr>
+                <td>padding: 10px 20px;</td>
+                <td>Az elem belsejétől 10px-re helyezi el a keretet a bal és jobb oldalon, 20px-re a felső és alsó
+                    oldalon.</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="text-center ">Margin</td>
+            </tr>
+            <tr>
+                <td>margin: 10px;</td>
+                <td>Az elemet 10px-re helyezi el a szomszédos elemektől.</td>
+            </tr>
+            <tr>
+                <td>margin: 10px 20px;</td>
+                <td>Az elemet 10px-re helyezi el a szomszédos elemektől a bal és jobb oldalon, 20px-re a felső és alsó
+                    oldalon.</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="text-center ">Width & Heigth</td>
+            </tr>
+            <tr>
+                <td>width: 100px;</td>
+                <td>Az elem szélessége 100px.</td>
+            </tr>
+            <tr>
+                <td>height: 100px;</td>
+                <td>Az elem magassága 100px.</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="text-center ">Border</td>
+            </tr>
+            <tr>
+                <td>border: 1px solid black;</td>
+                <td>Az elem kerete 1px vastag, fekete színű.</td>
+            </tr>
+            <tr>
+                <td>border: 1px solid black;</td>
+                <td>Az elem kerete 1px vastag, fekete színű.</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="text-center ">Animation</td>
+            </tr>
+            <tr>
+                <td>animation: név 5s infinite;</td>
+                <td>Az elemen lévő animáció 5 másodpercenként ismétlődik.</td>
+            </tr>
+            <tr>
+                <td>animation: név 5s infinite alternate;</td>
+                <td>Az elemen lévő animáció 5 másodpercenként ismétlődik, és a végén visszafelé is lejátszódik.</td>
+            </tr>
+            <tr>
+                <td>animation: név 5s infinite alternate-reverse;</td>
+                <td>Az elemen lévő animáció 5 másodpercenként ismétlődik, és a végén visszafelé is lejátszódik.</td>
+            </tr>
+            <tr>
+                <td>animation: név 5s infinite linear;</td>
+                <td>Az elemen lévő animáció 5 másodpercenként ismétlődik, és a végén visszafelé is lejátszódik.</td>
+            </tr>
+
+
+
+        </table>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,102 @@
+npm install -g @angular/cli
+
+
+1. feladat
+ng new vizsga
+
+
+2. feladat
+cd vizsga
+ng g c feladat
+
+
+3. feladat
+KÓD: app-routing.module.ts
+
+const routes: Routes = [
+  { path: "angularmodul", component: DataBindingComponent },//Ha beírom megoldás, akkor  a feladat megoldására ugrik
+  { path: "", redirectTo: "/angularmodul", pathMatch: "full" },//Ha üresen hagyom az útvonal nevét akkor is
+  { path: "**", component: DataBindingComponent }//Vagy ha bármi mást írok be akkor is
+];
+
+
+4. feladat
+npm install bootstrap
+@import "~bootstrap/dist/css/bootstrap.css";
+
+
+5. feladat
+
+import { FormsModule } from '@angular/forms';
+
+imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule
+  ],
+
+KÓD: component.html
+<h1>Vizsgafeladat</h1>
+    <div class="form-group">
+        <label for="ertekMezo">Vizsgálandó szám</label>
+        <input type="number" class="form-control" id="ertekMezo" [(ngModel)]="vizsgaltErtek">
+    </div>
+
+
+
+6. feladat 
+
+    <button type="button" class="btn btn-primary form-control mt-3" (click)="EredmenyMentes()">Eredmény mentése</button>
+
+
+7. feladat
+<p>A(z) {{vizsgaltErtek}}: {{eredmeny}}</p>
+
+8. feladat
+
+//Prímszám vizsgálat függvénye
+  PrimE(vizsgaltErtek: number): boolean {
+    let osztokSzama = 0;
+    for (let i = 1; i <= vizsgaltErtek; i++) {
+      if (vizsgaltErtek % i == 0) {
+        osztokSzama++;
+      }
+    }
+    if (osztokSzama == 2) {
+      return true;
+    }
+    else {
+      return false;
+    }
+  }
+
+  //Eredmény kiíratása
+  EredmenyKiir(): string {
+    if (this.PrimE(this.vizsgaltErtek)) {
+      return "prím";
+    }
+    else {
+      return "NEM prím";
+    }
+  }
+
+
+9.feladat
+EredmenyMentes() {
+    if (this.PrimE(this.vizsgaltErtek))
+      this.megoldasok.push(`Az ${this.vizsgaltErtek} prím`)
+    else {
+      this.megoldasok.push(`Az ${this.vizsgaltErtek} NEM prím`)
+    }
+  }
+  megoldasok: string[] = [];
+
+<ul>
+        <ul>
+            <li *ngFor="let eredmenyek of megoldasok">
+                {{eredmenyek}}
+            </li>
+        </ul>
+    </ul>
+
+
